@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <script src="ejercicio1.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+
+<body>
+
+    <h1>FORMULARIO</h1>
+
+    <div id="contenedor">
+        <form id="formulario" method="get">
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre"><br>
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos"><br>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono"><br>
+
+            <label for="dni">DNI:</label>
+            <input type="text" id="dni" name="dni"><br>
+
+            <label for="edad">Edad:</label>
+            <input type="text" id="edad" name="edad"><br>
+
+            <label for="sexo">Sexo:</label><br>
+            <input type="radio" id="hombre" name="sexo" value="hombre">Hombre<br>
+            <input type="radio" id="mujer" name="sexo" value="mujer">Mujer<br>
+
+            <label for="foto">Incluir mi foto:</label>
+            <input type="file" id="foto" name="foto"><br>
+
+            <input type="checkbox" id="publicidad" name="publicidad" value="si">
+            <label for="publicidad">Enviar publicidad</label><br>
+
+            <label for="aficion">Elige tu afición favorita:</label>
+            <select id="aficion" name="aficion">
+                <option value="musica">Música</option>
+                <option value="lectura">Lectura</option>
+                <option value="deporte">Deporte</option>
+            </select><br>
+
+
+            <br><label for="observaciones">Observaciones:</label><br>
+            <textarea id="observaciones" name="observaciones"></textarea><br>
+
+            <input type="submit" value="Guardar cambios">
+            <input type="reset" value="Borrar los datos incluidos">
+
+        </form>
+    </div>
+
+</body>
+
+</html>

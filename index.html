@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10141c">
+  <title>JavaScript · Cuaderno de prácticas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="Inicio"><span class="brand-mark">JS</span><span><b>Cuaderno</b><small>PRÁCTICAS JAVASCRIPT</small></span></a>
+      <label class="search-wrap"><span>⌕</span><input id="search" type="search" placeholder="Buscar ejercicio…" autocomplete="off"><kbd>/</kbd></label>
+      <div class="nav-caption">BIBLIOTECA <span id="exercise-count"></span></div>
+      <nav id="exercise-nav" aria-label="Prácticas"></nav>
+      <div class="sidebar-foot"><span class="status-dot"></span> Catálogo local <span class="foot-count" id="group-count"></span></div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar"><div class="breadcrumbs"><span>Mis prácticas</span><span class="crumb-slash">/</span><b id="crumb-current">Selecciona un ejercicio</b></div><div class="top-actions"><span class="local-badge"><i></i> LOCAL</span></div></header>
+      <section id="welcome" class="welcome">
+        <div class="welcome-kicker"><span class="kicker-line"></span> TU ESPACIO DE TRABAJO</div>
+        <h1>JavaScript,<br><span>ejercicio a ejercicio.</span></h1>
+        <p>Explora tus prácticas, revisa el código y ejecuta cada ejercicio en un mismo lugar.</p>
+        <div class="welcome-stats"><div><b id="stat-exercises">—</b><span>ejercicios</span></div><div><b id="stat-groups">—</b><span>colecciones</span></div><div><b>HTML + JS</b><span>código fuente</span></div></div>
+        <button id="random-exercise" class="primary-btn">Abrir un ejercicio <span>↗</span></button>
+      </section>
+      <section id="workspace" class="workspace" hidden>
+        <div class="exercise-heading"><div><div class="eyebrow" id="exercise-group"></div><h1 id="exercise-title"></h1><p id="exercise-path"></p></div><a id="open-new" class="secondary-btn" target="_blank" rel="noopener">Abrir en pestaña nueva <span>↗</span></a></div>
+        <div class="tabs" role="tablist"><button class="tab active" data-panel="preview" role="tab">Vista previa</button><button class="tab" data-panel="code" role="tab">Código fuente <span class="tab-count">HTML · JS</span></button></div>
+        <section id="preview-panel" class="panel preview-panel"><div class="panel-toolbar"><div><span class="window-dots"><i></i><i></i><i></i></span><span class="panel-label">EJECUCIÓN</span></div><button id="reload-frame" class="icon-btn" title="Recargar ejercicio">↻ <span>Recargar</span></button></div><div class="frame-wrap"><iframe id="exercise-frame" title="Vista previa del ejercicio" sandbox="allow-scripts allow-forms allow-modals allow-same-origin" src="about:blank"></iframe></div><div id="console-box" class="console-box"><div class="console-head"><span><i class="console-indicator"></i> CONSOLA</span><button id="clear-console" class="text-btn">Limpiar</button></div><div id="console-output" class="console-output"><span class="console-muted">Los errores del ejercicio aparecerán aquí.</span></div></div></section>
+        <section id="code-panel" class="panel code-panel" hidden><div class="code-toolbar"><div class="code-switch"><button class="code-tab active" data-code="html">index.html</button><button class="code-tab" data-code="js">JavaScript</button></div><button id="copy-code" class="secondary-btn copy-btn">Copiar código <span>▢</span></button></div><pre class="code-view"><code id="code-content"></code></pre></section>
+      </section>
+      <footer class="main-footer"><span>Hecho para aprender, probar y volver a probar.</span><span>VANILLA JS <i>✳</i></span></footer>
+    </main>
+  </div>
+  <script src="app.js" defer></script>
+</body>
+</html>
