@@ -6,6 +6,16 @@ const frame = document.querySelector('#exercise-frame');
 const output = document.querySelector('#console-output');
 const state = { exercises: [], selected: null, codeType: 'html' };
 
+document.querySelector('#home-link').addEventListener('click', event => {
+  event.preventDefault();
+  state.selected = null;
+  workspace.hidden = true;
+  welcome.hidden = false;
+  document.querySelector('#crumb-current').textContent = 'Selecciona un ejercicio';
+  history.replaceState(null, '', location.pathname);
+  renderNav();
+});
+
 const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 const esc = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
